@@ -71,7 +71,7 @@ $('body').on('click','#Sign_in',function(e){
         }
 
     }
-    var users=store.get('users');
+    var users=store.get('users')||[];
 
     for(var i=0;i<users.length;i++){
         if(users[i].username==username){
