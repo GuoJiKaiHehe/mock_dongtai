@@ -158,7 +158,7 @@ $('body').on('click','#register',function(e){
 })
   $("#register_form").validate({ 
       submitHandler:function(form){
-           var users=store.get('users');
+           var users=store.get('users')||[];
            user={
             username:$('#register_form input[name=username]').val(),
             email:$('#register_form input[name=email]').val(),
