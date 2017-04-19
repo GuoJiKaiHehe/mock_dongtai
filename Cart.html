@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Online Shop</title>
+    <meta name="description" content="Online Shop where you can buy all you need."/>
+
+    <!-- Bootstrap -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/site.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="site-masthead">
+      <div class="container">
+        <nav class="site-nav">
+          <a class="site-nav-item" href="#" id="nav-switch">Toggle Menu</a>
+          <div id="nav-toggle" style="display: none;">
+            <a class="site-nav-item" href="./index.html">Shop</a>
+            <a class="site-nav-item" href="./Categories.html">Categories</a>
+            <a class="site-nav-item active" href="./Cart.html">Cart</a>
+            <a class="site-nav-item" href="./Orders.html">Orders</a>
+            <a class="site-nav-item" href="./Me.html">Me</a>
+          </div>
+        </nav>
+
+        <div class="search">
+          
+        </div>
+      </div>
+    </div>
+  <style>
+
+  </style>
+    <div class="container" style="min-height:380px;">
+
+      <div class="site-header" style="margin-bottom:45px;">
+        <h1 class="site-title">Online Shop</h1>
+        <p class="lead site-description"></p>
+      </div>
+<style>
+  .product .price{
+      position: absolute;
+      right:40%;
+      top:50%;
+  }
+</style>
+<ol class="breadcrumb">
+    <li><a href="#">Electronics</a></li>
+    
+    <li class="active">Shopping Cart</li>
+</ol>  
+      <div class="row">
+        <div class="col-sm-12 site-main">
+          <div class="site-post col-sm-12" id="cart_goods" > 
+          <div class="product">            
+            <h3>#name#</h3>
+            <div >
+             <img src="#img#" alt="iPhone 7"alt="#name#" width="88" height="88" style="border:1px solid #ccc;" />
+              <div class="price">price：￥<strong>#price#</strong>
+                      <span class="count" style="margin-left:15px;">count:#count#件</span>
+             </div>
+             </div>
+           
+            <div class="btn-group" style="float:right;top:">
+              <button type="button" class="btn btn-danger remove" >
+                Remove
+              </button>
+            </div>
+            </div>
+            <hr style="border:1px solid #ccc; margin:15px 0;" />
+
+            <div class="product">
+              <h3>Ipad 15 32G </h3>
+              <div >
+             <img src="./img/iPad.jpg" alt="iPad" width="88" height="88" style="border:1px solid #ccc;" />
+              <div class="price">价格：￥<strong>2555.00</strong></div>
+             </div>
+            <time>Estimated delivery date: 03/01/2017</time>
+
+            <div class="btn-group" style="float:right">
+              <button type="button" class="btn btn-danger remove" >
+                Remove
+              </button>
+            </div>
+            </div>
+            <hr style="border:1px solid #ccc;margin:15px 0;" />
+            <div class="product">
+            <h3>Xiao Mi 16 32G </h3>
+              <div >
+             <img src="./img/xiaomi2.jpg" alt="Xiao Mi" width="88" height="88" style="border:1px solid #ccc;" />
+                <div class="price">价格：￥<strong>5558.00</strong></div>
+             </div>
+            <time>Estimated delivery date: 03/01/2017</time>
+            <div class="btn-group" style="float:right">
+             
+              <button type="button" class="btn btn-danger remove" >
+                Remove
+              </button>
+            </div>
+            </div>
+            <hr style="border:1px solid #ccc;margin:15px 0;" />
+            <p>Total price:￥<span class="label label-info total_price">5588.00</span></p>
+             <a href="javascript:;" class="btn btn-primary btn-block Settlement">Settlement</a>
+          </div><!-- /.site-post -->
+
+        </div><!-- /.site-main -->
+
+      </div><!-- /.row -->
+      
+    </div><!-- /.container -->
+     <div id="footer"><!--footer-->
+    <!-- First Column -->
+
+    <div class="one-fourth">
+        <h3>Useful Links</h3>
+            <ul class="footer_links">
+                <li><a href="#">Lorem Ipsum</a></li>
+                <li><a href="#">Ellem Ciet</a></li>
+                <li><a href="#">Currivitas</a></li>
+                <li><a href="#">Salim Aritu</a></li>
+            </ul>
+    </div>
+    
+    <!-- Second Column -->
+    
+    <div class="one-fourth">
+        <h3>Terms</h3>
+            <ul class="footer_links">
+                <li><a href="#">Lorem Ipsum</a></li>
+                <li><a href="#">Ellem Ciet</a></li>
+                <li><a href="#">Currivitas</a></li>
+                <li><a href="#">Salim Aritu</a></li>
+            </ul>
+    </div>
+    
+    <!-- Third Column -->
+    
+    <div class="one-fourth">
+        <h3 style="padding:0;">Information</h3>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet enim id dui tincidunt vestibulum rhoncus a felis.
+        
+        
+    </div>
+    
+    <!-- Fourth Column -->
+    
+    <div style="clear:both"></div>
+    <div id="temp_cart" style="display:none;">
+      <div class="product">            
+            <h3>#name#</h3>
+            <div >
+             <img src="#img#" alt="iPhone 7"alt="#name#" gid="#id#" width="88" height="88" style="border:1px solid #ccc;" />
+              <div class="price">price：￥<strong>#price#</strong>
+                      Count:
+   <span class="mui-amount-decrease btn btn-primary">-</span>
+      <input type="text" class="tb-text mui-amount-input" value="#count#" size="4" style="text-align:center;" maxlength="8" title="请输入购买量">
+    <span class="mui-amount-increase btn btn-primary">+</span>
+
+             </div>
+             </div>
+           
+            <div class="btn-group" style="float:right;top: -28px;eft: -75px;">
+              <button type="button" class="btn btn-danger remove" gid="#id#" >
+                Remove
+              </button>
+            </div>
+            </div>
+            <hr style="border:1px solid #ccc; margin:15px 0;" />
+    </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="./js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./js/bootstrap.min.js"></script>
+    
+    <script src="./js/jquery.slidebox.js"></script>
+     <script src="./js/layer/layer.js"></script>
+    <script src="./js/layer/dialog.js"></script>
+ <script src="js/store.js"></script>
+ <script src="js/jquery-validate.js"></script>  
+ <script src="data.js"></script>
+    <script src="./js/common.js"></script>
+    <script>     
+    
+$('#slide').slideBox();   
+
+$('body').on('click','.remove',function(e){
+  var gid=$(this).attr('gid');
+  var cart=store.get('cart');
+  var cart_arr=cart.split(',');
+  var temp_arr;
+  var temp_str='';
+  for(var i=0;i<cart_arr.length;i++){
+        temp_arr=cart_arr[i].split('-');
+       // console.log(temp_arr[0])
+        if(temp_arr[0]!=gid){
+            temp_str+=temp_arr[0]+'-'+temp_arr[1]+',';
+        }
+      //  console.log(temp_arr[0])
+  }
+
+  temp_str=temp_str.slice(0,-1);
+ 
+  store.set('cart',temp_str);
+  count_total();
+  div=$(this).parent().parent().hide(500,function(){
+    $(this).remove();
+
+    if($('.product').length==1){
+      $('.Settlement').remove();
+      $('.total_price').parent().remove();
+      $('#cart_goods').html('<p style="color:#red;text-align:center;" >Shopping cart no goods...</p>')
+    }
+  })
+  div.next().hide();
+
+
+})
+var total_price=0;
+for(var i=0;i<$('.price').length;i++){
+  total_price+=parseInt($('.price').eq(i).find('strong').text());
+}
+
+$('.total_price').text(total_price);
+var html='';
+if(store.get('cart')){
+  var temp=$('#temp_cart').html();
+  var cart=store.get('cart');
+  var cart_arr=cart.split(',');
+  
+  var count,goods_id;
+  for(var i=0;i<cart_arr.length;i++){
+      var temp_arr=cart_arr[i].split('-');
+      for(var j=0;j<goods.length;j++){
+        if(temp_arr[0]==goods[j].id){
+          html+=temp.replace(/#name#/g,goods[j].name)
+                    .replace(/#price#/g,goods[j].price)
+                    .replace(/#id#/g,goods[j].id)
+                    .replace(/#count#/g,temp_arr[1])
+                    .replace(/#img#/g,goods[j].img);
+        }
+      }
+      
+  }
+  bottom_str='<p>Total price:￥<span class="label label-info total_price">5588.00</span></p>'+
+ '<a href="javascript:;" class="btn btn-primary btn-block Settlement">Settlement</a>';
+ html+=bottom_str;
+  
+}else{
+  html='<p style="color:#red;text-align:center;" >Shopping cart no goods...</p>';
+}
+
+$('#cart_goods').html(html);
+
+function count_total(){
+ var  all_util_obj=$('.price strong');
+ var  all_count=$('.mui-amount-input');
+ var total=0;
+ for(var i=0;i<all_util_obj.length-1;i++){
+  //console.log(all_util_obj.eq(i).text())
+    total+=parseInt(all_util_obj.eq(i).text())*parseInt(all_count.eq(i).val());
+ }
+
+ $('.total_price').text(total.toString());
+  
+}
+count_total();
+$('.mui-amount-increase').click(function(){
+            $(this).prev().val(parseInt($(this).prev().val())+1);
+              
+              count_total();
+})
+
+
+  $('body').on('click','.mui-amount-decrease',function(){
+
+          if($(this).next().val()>1){
+             $(this).next().val(parseInt($(this).next().val())-1);
+           }else{
+              $(this).parent().parent().next().find('.remove').click();
+           }
+           count_total();
+            
+})
+    </script>
+  
+  </body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Online Shop</title>
+    <meta name="description" content="Online Shop where you can buy all you need."/>
+
+    <!-- Bootstrap -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/site.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="site-masthead">
+      <div class="container">
+        <nav class="site-nav">
+          <a class="site-nav-item" href="#" id="nav-switch">Toggle Menu</a>
+          <div id="nav-toggle" style="display: none;">
+            <a class="site-nav-item active" href="./index.html">Shop</a>
+            <a class="site-nav-item" href="./Categories.html">Categories</a>
+            <a class="site-nav-item" href="./Cart.html">Cart</a>
+            <a class="site-nav-item" href="./Orders.html">Orders</a>
+            <a class="site-nav-item" href="./Me.html">Me</a>
+          </div>
+        </nav>
+       
+      </div>
+      
+    </div>
+
+    <div class="container">
+
+      <div class="site-header">
+        <h1 class="site-title">Online Shop</h1>
+        <p class="lead site-description"></p>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-8 site-main">
+          <div class="site-post">
+                       
+          </div><!-- /.site-post -->
+        </div><!-- /.site-main -->
+      </div><!-- /.row -->
+      
+    </div><!-- /.container -->
+    
+    <div id="slide" class="slideBox" style="width:100%;">
+      <ul class="items">
+        <li  style="width:100%" >
+         
+          <img src="img/iPhone.jpg" title="iPhone" alt="iPhone"  width="100%" height="100%"  />
+        
+        </li>
+        <li   style="width:100%">
+       
+        <img src="img/iPad.jpg" title="iPad" alt="iPad"   width="100%" height="100%"   />
+        </li>
+        <li  style="width:100%">
+       
+        <img src="img/Macbook.jpg"  title="Macbook" alt="Macbook"   width="100%" height="100%"      />
+        
+        </li>
+      </ul>
+    </div>
+
+<div id="content" class="container"style="margin:20px auto 10px auto;">
+      
+</div>
+        
+
+    </div>
+  
+
+<style>
+
+  .foot p{
+    display:block;
+    padding:8px 0;
+    text-indent: 2em;
+  }
+    .price{
+        
+    font-size: 18px;
+  
+    color: #F40;
+    font-weight: 700;
+    }
+    .one-fourth{
+      cursor: pointer;
+    }
+</style>
+
+    <div id="footer"><!--footer-->
+    <!-- First Column -->
+
+    <div class="one-fourth">
+        <h3>Useful Links</h3>
+            <ul class="footer_links">
+                <li><a href="#">Lorem Ipsum</a></li>
+                <li><a href="#">Ellem Ciet</a></li>
+                <li><a href="#">Currivitas</a></li>
+                <li><a href="#">Salim Aritu</a></li>
+            </ul>
+    </div>
+    
+    <!-- Second Column -->
+    
+    <div class="one-fourth">
+        <h3>Terms</h3>
+            <ul class="footer_links">
+                <li><a href="#">Lorem Ipsum</a></li>
+                <li><a href="#">Ellem Ciet</a></li>
+                <li><a href="#">Currivitas</a></li>
+                <li><a href="#">Salim Aritu</a></li>
+            </ul>
+    </div>
+    
+    <!-- Third Column -->
+    
+    <div class="one-fourth">
+        <h3 style="padding:0;">Information</h3>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet enim id dui tincidunt vestibulum rhoncus a felis.
+        
+        
+    </div>
+    
+    <!-- Fourth Column -->
+    
+    <div style="clear:both"></div>
+    
+    </div>
+<div id="product_temp" style="display:none;">
+  <div class="one-fourth last goods" gid="#id#">
+      <div class="heading_bg">
+      <h2>#name#</h2>
+      </div>
+      <img src="#img#" width="217"  alt="#name#" height="129" title="#name#"  /> 
+       <div class="foot">
+         <strong class="price">#price#</strong>   
+     <p>#desc#
+    </p>
+    </div>
+    </div>
+</div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="./js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./js/bootstrap.min.js"></script>
+     <script src="./js/layer/layer.js"></script>
+    <script src="./js/layer/dialog.js"></script>
+ <script src="js/store.js"></script>
+ <script src="js/jquery-validate.js"></script>  
+    <script src="./js/jquery.slidebox.js"></script>
+    <script src="data.js"></script>
+     <script src="./js/common.js"></script>
+     <script>
+var product_temp=$('#product_temp').html();
+  var div_row='<div class="row">'
+    var content=$('#content');
+    var html='';
+
+    for(var i=0;i<goods.slice(0,4).length;i++){
+        html+=product_temp.replace(/#name#/g,goods[i].name)
+                          .replace(/#price#/g,goods[i].price)
+                          .replace(/#desc#/g,goods[i].desc)
+                          .replace(/#img#/g,goods[i].img)
+                          .replace(/#id#/g,goods[i].id)
+
+    }
+  div_row+='</div>';
+  content.html(html);
+ $('#slide').slideBox({
+             
+           });  
+    </script>
+  </body>
+</html>

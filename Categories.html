@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Online Shop</title>
+    <meta name="description" content="Online Shop where you can buy all you need."/>
+
+    <!-- Bootstrap -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/site.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+    #category_books{
+        margin-top:40px;
+    }
+    .thumbnail{
+        cursor: pointer;
+    }
+    </style>
+  </head>
+  <body>
+
+
+    <div class="site-masthead">
+      <div class="container">
+        <nav class="site-nav">
+          <a class="site-nav-item" href="#" id="nav-switch">Toggle Menu</a>
+          <div id="nav-toggle" style="display: none;">
+            <a class="site-nav-item" href="./index.html">Shop</a>
+            <a class="site-nav-item active" href="./Categories.html">Categories</a>
+            <a class="site-nav-item" href="./Cart.html">Cart</a>
+            <a class="site-nav-item" href="./Orders.html">Orders</a>
+            <a class="site-nav-item" href="./Me.html">Me</a>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <div class="container" style="min-height:350px;">
+    <div class="col-sm-12 site-main">
+      <div class="site-header">
+        <h1 class="site-title">Online Shop</h1>
+        <p class="lead site-description"></p>
+      </div>
+
+<div class="row" id="category_books">
+       
+    
+</div>
+<hr>
+ <div class="row" id="category_digital">
+ 
+    
+</div>
+<hr>
+ <div class="row" id="category_daily_use">
+ 
+</div>
+
+</div>  <!--site-main-->
+      
+    </div><!-- /.container -->
+
+    <div id="temp1" style="display:none;">
+       
+    <div class="col-sm-6 col-md-3">
+        <div class="thumbnail">
+            <img src="#pic#"
+                 alt="#name#" style="width:200px;height:300px;" gid="#id#"  >
+            <div class="caption">
+                <h3>#name#</h3>
+                <p class="desc">#desc#</p>
+                <p>
+                    <a href="#" class="btn btn-primary" role="button" gid="#id#"  onclick="skip_details(this)" >
+                        purchase
+                    </a>
+                   <a href="" class="pull-right btn-info btn">more</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    </div>
+  
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="./js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./js/bootstrap.min.js"></script>
+      <script src="./js/layer/layer.js"></script>
+  <script src="./js/layer/dialog.js"></script>
+ <script src="js/store.js"></script>
+    <script src="js/jquery-validate.js"></script>  
+    <script src="data.js"></script>
+    <script src="./js/common.js"></script>
+
+   
+    <div id="footer"><!--footer-->
+    <!-- First Column -->
+
+    <div class="one-fourth">
+        <h3>Useful Links</h3>
+            <ul class="footer_links">
+                <li><a href="#">Lorem Ipsum</a></li>
+                <li><a href="#">Ellem Ciet</a></li>
+                <li><a href="#">Currivitas</a></li>
+                <li><a href="#">Salim Aritu</a></li>
+            </ul>
+    </div>
+    
+    <!-- Second Column -->
+    
+    <div class="one-fourth">
+        <h3>Terms</h3>
+            <ul class="footer_links">
+                <li><a href="#">Lorem Ipsum</a></li>
+                <li><a href="#">Ellem Ciet</a></li>
+                <li><a href="#">Currivitas</a></li>
+                <li><a href="#">Salim Aritu</a></li>
+            </ul>
+    </div>
+    
+    <!-- Third Column -->
+    
+    <div class="one-fourth">
+        <h3 style="padding:0;">Information</h3>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet enim id dui tincidunt vestibulum rhoncus a felis.
+        
+        
+    </div>
+    
+    <!-- Fourth Column -->
+    
+    <div style="clear:both"></div>
+    
+    </div>
+  </body>
+</html>
+ <script>
+
+    //显示数据
+    var template_b=$('#temp1').html();
+    var html_temp='';
+    var books=categorys[0].Books;
+    var books_html='';
+    console.log(books.length);
+    for(var i=0;i<books.length;i++){
+       
+        html_temp+=template_b.replace(/#pic#/g,books[i].imgurl)
+                            .replace(/#name#/g,books[i].name)
+                            .replace(/#desc#/g,books[i].desc)
+                            .replace(/#id#/g,books[i].id)
+
+    }
+    html_temp.replace(/#cate_title#/g,"Books");
+    $('#category_books').html(html_temp);
+    $('#category_books').prepend("<h3>Books</h3>");
+    html_temp='';
+    var Digital=categorys[0].Digital;
+    for(var i=0;i<Digital.length;i++){
+       
+        html_temp+=template_b.replace(/#pic#/g,Digital[i].imgurl)
+                            .replace(/#name#/g,Digital[i].name)
+                            .replace(/#desc#/g,Digital[i].desc)
+                            .replace(/#id#/g,Digital[i].id);
+
+    }
+    html_temp.replace(/#cate_title#/g,"Digital");
+    $('#category_digital').html(html_temp);
+    $('#category_digital').prepend("<h3>Digital</h3><p>Laptops, smartphones, etc.</p>");
+
+
+     html_temp='';
+    var DailyUse=categorys[0].DailyUse;
+    for(var i=0;i<DailyUse.length;i++){
+       
+html_temp+=template_b.replace(/#pic#/g,DailyUse[i].imgurl)
+                            .replace(/#name#/g,DailyUse[i].name)
+                            .replace(/#desc#/g,DailyUse[i].desc)
+                            .replace(/#id#/g,DailyUse[i].id);
+
+    }
+    html_temp.replace(/#cate_title#/g,"Digital");
+    $('#category_daily_use').html(html_temp);
+    $('#category_daily_use').prepend("<h3>Digital</h3><p>Laptops, smartphones, etc.</p>");
+
+/*Digital
+Laptops, smartphones, etc.*/
+
+      // $('.container').hide().show(500)
+
+   $('.site-post').fadeIn('low');
+      $('.desc').css({
+  'text-indent':'2em',
+})
+  
+     $('.desc').each(function(){
+          
+          if($(this).text().length>88){
+            $(this).text($(this).text().substr(0,66)+'...')
+          }
+     })
+     function skip_details(o){
+        var id=$(o).attr('gid');
+        location.href="./details.html";
+        store.set('click_goods',id);
+     }
+
+
+
+
+
+
+    </script>
